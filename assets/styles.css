@@ -1,0 +1,112 @@
+/* Styles for Settings Page */
+#site-activity-settings .container > ul > li {
+    color: #555;
+    font-size: 1.25em;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin-bottom: 2em;
+    font-weight: 700;
+}
+
+#site-activity-settings .container ul ul li {
+    font-weight: 400;
+}
+
+#site-activity-settings ul ul {
+    margin: 10px 0 0 2em;
+}
+
+#site-activity-settings input:indeterminate {
+    position: relative;
+}
+
+#site-activity-settings input:indeterminate:before {
+    content: '';
+    width: 10px;
+    height: 3px;
+    background: #1E8CBE;
+    position: absolute;
+    left: 2px;
+    top: 6px;
+}
+
+#site-activity-settings table th {
+    display: none;
+}
+
+#site-activity-settings table td {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#site-activity-settings table >tbody > tr > td > ul {
+    flex: 0 0 auto;
+    padding: 0 4em 2em;
+    border: 1px solid gray;
+    margin-right: -1px;
+}
+
+/* Navigation Styles */
+#site-activity-navigation {
+    padding: 10px 0;
+}
+
+#site-activity-navigation a {
+    display: inline-block;
+    padding: 0 5px;
+    position: relative;
+    margin: 0 5px;
+    font-weight: 400;
+    transition: all .1s ease-in-out;
+}
+
+#site-activity-navigation a.active {
+    font-weight: 700;
+}
+
+#site-activity-navigation a::before {
+    content: '';
+    width: 1px;
+    height: 15px;
+    position: absolute;
+    top: 4px;
+    right: -7px;
+    background: #ccc;
+}
+
+#site-activity-navigation a:last-child::before {
+    display: none;
+}
+
+#site-activity-navigation.fixed {
+    position: fixed;
+    top: 32px;
+    background: #fff;
+    width: calc(100% - 222px);
+    padding: 10px 10px 14px;
+    box-shadow: 0 4px 2px -2px gray;
+    z-index: 9999;
+}
+
+@media screen and (max-width: 960px) {
+    #site-activity-navigation.fixed {
+        width: calc(100% - 98px);
+    }
+}
+
+@media screen and (max-width: 782px) {
+    #site-activity-navigation.fixed {
+        top: 46px;
+        width: calc(100% - 42px);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #site-activity-navigation.fixed {
+        top: 0;
+    }
+}
+
+.tablenav {
+    padding-bottom: 10px;
+}
